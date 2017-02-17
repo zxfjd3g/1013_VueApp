@@ -14,7 +14,7 @@
         data() {return {}},
         methods: {},
         computed: {},
-        components: {}
+        components: {}  //配置组件标签
       }
     </script>
     ```
@@ -28,13 +28,13 @@
   在父组件对象的components属性中配置组件模块对象
   ```
   <template>
-    <hello>
+    <hello-world>
   </template>
   <script>
     import Hello from './components/Hello'
     export default {
       components: {
-        Hello
+        HelloWorld: Hello
       }
     }
   </script>
