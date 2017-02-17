@@ -2,7 +2,7 @@
   <div class="todo-container">
     <div class="todo-wrap">
       <todo-header :add-todo="addTodo"></todo-header>
-      <todo-main :todos="todos"></todo-main>
+      <todo-main :todos="todos" :delete-todo="deleteTodo"></todo-main>
       <todo-footer></todo-footer>
     </div>
   </div>
@@ -11,19 +11,26 @@
   import TodoHeader from './components/TodoHeader'
   import TodoMain from './components/TodoMain'
   import TodoFooter from './components/TodoFooter'
+  import storageUtil from './util/storageUtil'
 
   export default {
     data () {
       return {
-        todos: [
-          {text: '工作', isDone: true},
-          {text: '买房', isDone: false}
-        ]
+        todos: storageUtil.getTodos()
       }
     },
     methods: {
       addTodo (todo) {
         this.todos.unshift(todo)
+      },
+      deleteTodo (todo) {
+        this.todos.$remove(todo)
+      }
+    },
+    watch: {
+      todos: {
+        handler: storageUtil.saveTodos,
+        deep: true // 深度监视
       }
     },
     components: {TodoHeader, TodoMain, TodoFooter}

@@ -1,13 +1,13 @@
 <template>
   <ul class="todo-main">
-    <todo-item v-for='todo in todos' :todo="todo"></todo-item>
+    <todo-item v-for='todo in todos' :todo="todo" :delete-todo="deleteTodo"></todo-item>
   </ul>
 </template>
 
 <script type="text/ecmascript-6">
   import TodoItem from './TodoItem'
   export default {
-    props: ['todos'],
+    props: ['todos', 'deleteTodo'],
     components: {TodoItem}
   }
 </script>
