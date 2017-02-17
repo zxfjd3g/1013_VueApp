@@ -1,17 +1,29 @@
 <template>
   <div class="todo-footer">
     <label>
-      <input type="checkbox"/>
+      <input type="checkbox" v-model="allDone"/>
     </label>
     <span>
-          <span>已完成0</span> / 全部2
+          <span>已完成{{doneCount}}</span> / 全部{{totalCount}}
         </span>
-    <button class="btn btn-danger">清除已完成任务</button>
+    <button class="btn btn-danger" v-show="doneCount>0" @click="deleteAllDone">清除已完成任务</button>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  export default {}
+  export default {
+    props: ['totalCount', 'doneCount', 'deleteAllDone', 'updateAllDone'],
+    computed: {
+      allDone: {//双向数据绑定效果
+        get() {
+          return this.totalCount===this.doneCount && this.totalCount>0
+        },
+        set(value) {
+          this.updateAllDone(value)
+        }
+      }
+    }
+  }
 </script>
 
 <style>

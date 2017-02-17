@@ -3,7 +3,8 @@
     <div class="todo-wrap">
       <todo-header :add-todo="addTodo"></todo-header>
       <todo-main :todos="todos" :delete-todo="deleteTodo"></todo-main>
-      <todo-footer></todo-footer>
+      <todo-footer :total-count="todos.length" :done-count="doneCount"
+                   :delete-all-done="deleteAllDone" :update-all-done="updateAllDone"></todo-footer>
     </div>
   </div>
 </template>
@@ -25,12 +26,25 @@
       },
       deleteTodo (todo) {
         this.todos.$remove(todo)
+      },
+      deleteAllDone () {
+        this.todos = this.todos.filter(todo => !todo.isDone)
+      },
+      updateAllDone(isAllDone) { // 将所有的todo设置为指定的状态
+        this.todos.forEach(item => {
+          item.isDone = isAllDone
+        })
       }
     },
     watch: {
       todos: {
         handler: storageUtil.saveTodos,
         deep: true // 深度监视
+      }
+    },
+    computed: {
+      doneCount: function () {
+        return this.todos.reduce((preCount, todo)=> todo.isDone?++preCount:preCount, 0)
       }
     },
     components: {TodoHeader, TodoMain, TodoFooter}
