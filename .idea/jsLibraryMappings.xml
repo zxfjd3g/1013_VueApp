@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/prepare/app_ajax" libraries="{VueApp/prepare/app_ajax/node_modules}" />
+    <file url="file://$PROJECT_DIR$/prepare/app_comment" libraries="{VueApp/prepare/app_comment/node_modules}" />
+    <file url="file://$PROJECT_DIR$/prepare/app_router" libraries="{VueApp/prepare/app_router/node_modules}" />
+    <file url="file://$PROJECT_DIR$/prepare/app_todos" libraries="{VueApp/prepare/app_todos/node_modules}" />
+    <file url="file://$PROJECT_DIR$/prepare/webpack-simple_demo" libraries="{VueApp/prepare/webpack-simple_demo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/prepare/webpack_demo" libraries="{VueApp/prepare/webpack_demo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/work/webpack-simple_demo" libraries="{VueApp/work/webpack-simple_demo/node_modules}" />
+    <file url="file://$PROJECT_DIR$/work/webpack_demo" libraries="{VueApp/work/webpack_demo/node_modules}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
+</project>
