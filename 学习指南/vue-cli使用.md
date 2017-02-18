@@ -2,7 +2,7 @@
 * 说明:
   * vue-cli是vue官方提供的脚手架工具包
   * github: https://github.com/vuejs/vue-cli
-* 使用vue-cli快速创建工程化项目
+* 使用vue-cli快速创建模块化/组件化/工程化项目
   * 使用基于webpack的简单模板创建项目: webpack-simple_demo
     ```
     npm install -g vue-cli    //下载脚手架包

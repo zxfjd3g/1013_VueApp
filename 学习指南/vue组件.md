@@ -22,6 +22,7 @@
     ```
     <style scoped>
       样式定义
+      body {}
     </style>
     ```
 * 基本使用
@@ -54,7 +55,7 @@
       props: ['name', 'age', 'setName']
       //详写
       props: {
-        name: {type: String},
+        name: {type: String, value:'xxx'},
         age: {type: Number},
         setNmae: {type: Function}
       }

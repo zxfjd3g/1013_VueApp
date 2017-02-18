@@ -25,6 +25,7 @@
       // 模块异步读取数据
       // this.todos = [{isDone: false, title: '吃饭'}, {isDone: true, title: '睡觉'}]
       this.todos = storageUtil.fetch()
+
       // 绑定自定义监听
       /*this.$on('delete_todo', function (todo) {
         this.deleteTodo(todo)

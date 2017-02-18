@@ -30,7 +30,7 @@
       },
       deleteItem() {
         const {todo, deleteTodo} = this
-        if(confirm(`确定删除${todo.title}的评论吗?`)) {
+        if(confirm(`确定删除${todo.title}吗?`)) {
           // 派发事件(delete_todo)，事件沿着父链冒泡
           this.$dispatch('delete_todo', todo)
         }
