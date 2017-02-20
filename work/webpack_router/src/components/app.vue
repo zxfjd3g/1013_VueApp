@@ -21,7 +21,7 @@
         <div class="panel">
           <div class="panel-body">
             <!--用于渲染匹配的组件-->
-            <router-view></router-view>
+            <router-view keep-alive :message="msg"></router-view>
           </div>
         </div>
       </div>
@@ -31,11 +31,12 @@
 <script>
 
   export default {
+    data () {
+      return {
+        msg: 'atguigu.com'
+      }
+    }
   }
 </script>
 <style>
-  p {
-    background: red;
-    color: green;
-  }
 </style>
