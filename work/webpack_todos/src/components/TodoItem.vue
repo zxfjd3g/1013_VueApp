@@ -29,7 +29,9 @@
       },
       delete() {
         if(confirm(`确定删除${this.todo.text}吗?`)) {
-          this.deleteTodo(this.todo)
+          // this.deleteTodo(this.todo)
+          //触发delete事件
+          this.$dispatch('delete', this.todo)
         }
       }
     }

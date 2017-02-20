@@ -67,7 +67,7 @@
     * 绑定事件监听
       * 方式一: 通过$on()
         ```
-        this.$on('delete_todo', function (todo) {
+        vm.$on('delete_todo', function (todo) {
           this.deleteTodo(todo)
         })
         ```

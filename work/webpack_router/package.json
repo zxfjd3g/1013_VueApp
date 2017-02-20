@@ -1,5 +1,5 @@
 {
-  "name": "webpack_demo",
+  "name": "webpack_router",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "zxfjd3g <258147149@qq.com>",
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "babel-runtime": "^6.0.0",
-    "vue": "^1.0.28"
+    "vue": "^1.0.21",
+    "vue-router": "^0.7.13"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

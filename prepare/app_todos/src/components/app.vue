@@ -39,7 +39,9 @@
       },
       // 删除指定todo
       deleteTodo (todo) {
-        this.todos.$remove(todo)
+        console.log('deleteTodo() ', todo)
+        var index = this.todos.indexOf(todo)
+        this.todos.splice(index, 1)
       },
       //删除所有完成的todo
       deleteDone () {

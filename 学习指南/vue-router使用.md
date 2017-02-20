@@ -5,8 +5,9 @@
   * 对应vue1.x的版本为: 0.7.13
 * 下载和引入
   ```
-  npm install vue-router@0.7.13 --save
-  import VueRouter from 'vue-router'
+  npm install vue-router@0.7.13 --save  //下载
+  import VueRouter from 'vue-router' //引入
+  Vue.use(VueRouter) //声明使用
   ```
 * 相关API说明
   * VueRouter(): 构建函数, 用来创建路由器对象
@@ -56,7 +57,7 @@
       <a v-link="{path:'/about'}">About</a>
       <a v-link="{path:'/home'}">Home</a>
       <!--用于渲染当前路由组件-->
-      <router-view keep-alive></router-view>  
+      <router-view></router-view>  
     </div>
     ```
   * 入口js: main.js

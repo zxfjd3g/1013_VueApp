@@ -2,7 +2,7 @@
   <div class="todo-container">
     <div class="todo-wrap">
       <todo-header :add-todo="addTodo"></todo-header>
-      <todo-main :todos="todos" :delete-todo="deleteTodo"></todo-main>
+      <todo-main :todos="todos"  @delete="deleteTodo"></todo-main>
       <todo-footer :total-count="todos.length" :done-count="doneCount"
                    :delete-all-done="deleteAllDone" :update-all-done="updateAllDone"></todo-footer>
     </div>
